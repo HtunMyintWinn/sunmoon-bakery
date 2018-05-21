@@ -1,0 +1,16 @@
+<?php
+
+Breadcrumbs::register('admin.$LOWER_NAME$.index', function ($breadcrumbs) {
+    $breadcrumbs->parent('admin.dashboard');
+    $breadcrumbs->push(trans('$LOWER_NAME$::menus.backend.$LOWER_NAME$.management'), route('admin.$LOWER_NAME$.index'));
+});
+
+Breadcrumbs::register('admin.$LOWER_NAME$.create', function ($breadcrumbs) {
+    $breadcrumbs->parent('admin.$LOWER_NAME$.index');
+    $breadcrumbs->push(trans('$LOWER_NAME$::menus.backend.$LOWER_NAME$.create'), route('admin.$LOWER_NAME$.create'));
+});
+
+Breadcrumbs::register('admin.$LOWER_NAME$.edit', function ($breadcrumbs, $id) {
+    $breadcrumbs->parent('admin.$LOWER_NAME$.index');
+    $breadcrumbs->push(trans('$LOWER_NAME$::menus.backend.$LOWER_NAME$.edit'), route('admin.$LOWER_NAME$.edit', $id));
+});
