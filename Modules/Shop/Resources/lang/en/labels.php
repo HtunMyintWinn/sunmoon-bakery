@@ -25,7 +25,7 @@ return [
                         'name'             => 'Name',
                         'description'      => 'Description',
                         'opening_hour'     => 'Opening Hour',
-                        'closing_hour'     => 'Çlosing Hour',
+                        'closing_hour'     => 'Closing Hour',
                         'address'          => 'Address',
                         'status'           => 'Status',
                         'created'          => 'Created',

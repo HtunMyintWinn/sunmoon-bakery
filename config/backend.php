@@ -21,6 +21,7 @@ return [
      * yellow-light
      */
     'theme' => 'blue',
+    'availiable_themes_list' => '',
 
     /*
      * Layout for the Admin LTE backend theme

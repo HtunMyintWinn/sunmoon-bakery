@@ -16,7 +16,7 @@
 @section('content')
     <div class="box box-success">
         <div class="box-header with-border">
-            <h3 class="box-title">{{ $shop->id.'\'s '.trans('shop::labels.backend.shop.management') }}</h3>
+            <h3 class="box-title">{{ $shop->name.'\'s '.trans('shop::labels.backend.shop.management') }}</h3>
 
             <div class="box-tools pull-right">
                 @include('shop::partials.header-buttons')
@@ -25,19 +25,31 @@
 
         <div class="box-body">
             <table class="table table-striped table-bordered table-hover table-checkable order-column">
-                <thead>
-                    <tr>
-                      <th>{{ trans('blockdate::labels.backend.block_date.table.id') }}</th>
-                      <th>{{ trans('blockdate::labels.backend.block_date.table.start_date') }}</th>
-                      <th>{{ trans('blockdate::labels.backend.block_date.table.end_date') }}</th>
-                      <th>{{ trans('blockdate::labels.backend.block_date.table.action') }}</th>
-                    </tr>
-                </thead>
+                <tr>
+                  <th>{{ trans('shop::labels.backend.shop.table.name') }}</th>
+                  <td>{{ $shop->name }}</td>
+                </tr>
+                <tr>
+                  <th>{{ trans('shop::labels.backend.shop.table.opening_hour') }}</th>
+                  <td>{{ $shop->opening_hour }}</td>
+                </tr>
+                <tr>
+                  <th>{{ trans('shop::labels.backend.shop.table.closing_hour') }}</th>
+                  <td>{{ $shop->closing_hour }}</td>
+                </tr>
+                <tr>
+                  <th>{{ trans('shop::labels.backend.shop.table.address') }}</th>
+                  <td>{{ $shop->address }}</td>
+                </tr>
+                <tr>
+                  <th>{{ trans('shop::labels.backend.shop.table.description') }}</th>
+                  <td>{{ $shop->description }}</td>
+                </tr>
             </table>
             
-                <div style="width: 500px; height: 500px;">
+<!-- <div style="width: 500px; height: 500px;">
     {!! Mapper::render() !!}
-</div>
+</div> -->
 
         </div><!-- /.box-body -->
     </div><!--box-->

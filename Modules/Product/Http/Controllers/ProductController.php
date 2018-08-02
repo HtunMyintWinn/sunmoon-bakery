@@ -94,9 +94,9 @@ class ProductController extends Controller
      */
     public function show(Product $product, ShowProductRequest $request)
     {
-        $message = ['title' => 'My first notification', 'website_id' => 1, 'body' => 'I am the body of the push message'];
+        // $message = ['title' => 'My first notification', 'website_id' => 1, 'body' => 'I am the body of the push message'];
 
-        SendPulse::createPushTask($message);
+        // SendPulse::createPushTask($message);
         return view('product::show')->withProduct($product);
     }
 

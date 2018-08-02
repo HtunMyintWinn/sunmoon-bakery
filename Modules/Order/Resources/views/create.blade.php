@@ -30,7 +30,7 @@
                     {{ Form::label('product_id', trans('order::labels.backend.order.table.product_id'), ['class' => 'col-lg-2 control-label']) }}
 
                     <div class="col-lg-10">
-                        {{ Form::select('product_id', $all_products, ['class' => 'selectpicker form-control', 'placeholder' => trans('order::labels.backend.order.table.product_id')]) }}
+                        {{ Form::select('product_id', $all_products, ['class' => 'select2 form-control', 'placeholder' => trans('order::labels.backend.order.table.product_id')]) }}
                     </div><!--col-lg-10-->
                 </div><!--form control-->
                 <div class="form-group">
